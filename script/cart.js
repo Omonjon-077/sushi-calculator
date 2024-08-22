@@ -1,4 +1,5 @@
 const cartWrapper = document.querySelector('.cart-wrapper');
+
 window.addEventListener('click', (ev) => {
     if (ev.target.hasAttribute('data-cart')) {
         const card = ev.target.closest('.card');
@@ -52,7 +53,7 @@ window.addEventListener('click', (ev) => {
 \t\t\t\t\t\t\t\t\t\t<!-- // cart-item__details -->
 
 \t\t\t\t\t\t\t\t\t</div>
-                  <button type="button" class="fs-4 d-flex align-items-center justify-content-center border-0 ms-auto my-auto me-2"><i class='bx bx-x del-item'></i></button>
+                  <button type="button" class="fs-4 d-flex align-items-center rounded-2 justify-content-center border-0 ms-auto my-auto me-2"><i class='bx bx-x del-item'></i></button>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<!-- // Cart item -->
