@@ -15,7 +15,6 @@
 </head>
 
 <body class="">
-
 <!-- Уведомление -->
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -34,8 +33,9 @@
 <header class="header">
     <div class="container text-center">
         <img src="img/logo/logo.svg" width="92" alt="Суши и пицца">
-        <div class="display-4">Доставка роллов</div>
-        <p class="lead">Оперативно и вкусно</p>
+        <div class="display-4">Sushi va Rollar</div>
+        <p class="lead">Mazali va yoqimli</p>
+        <p class="text-secondary fw-bold fs-6">Savollarga javop bering va promokod oling, <a href="questions.html" class="text-warning">bu yerda</a></p>
     </div>
 </header>
 
@@ -51,9 +51,9 @@
             <!-- Корзина -->
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Ваш заказ</h4>
+                    <h4 class="card-title">Buyurtmangiz</h4>
                     <div data-cart-empty class="alert alert-secondary" role="alert">
-                        Корзина пуста
+                        Savatda hozircha mahsulot yoʻq
                     </div>
                     <!-- cart-wrapper -->
                     <div class="cart-wrapper">
@@ -64,11 +64,11 @@
                     <!-- Стоимость заказа -->
                     <div class="cart-total">
                         <p data-cart-delivery class="d-none">
-                            <span class="h5">Доставка:</span> <span class="delivery-cost">250 ₽</span>
-                            <br> <span data-cart-delivery-description class="text-light-emphasis small ">Бесплатно при заказе от 700 ₽</span>
+                            <span class="h5">Yetkazib berish:</span> <span class="delivery-cost">25 000 so'm</span>
+                            <br> <span data-cart-delivery-description class="text-light-emphasis small ">90 000 so'm dan ortiq buyurtma berilsa bepul</span>
                         </p>
-                        <p><span class="h5">Итого:</span> <span class="total-price">0</span> <span
-                                class="rouble">₽</span></p>
+                        <p><span class="h5">Jami:</span> <span class="total-price">0</span> <span
+                                class="rouble">so'm</span></p>
                     </div>
                     <!-- // Стоимость заказа -->
 
@@ -76,14 +76,14 @@
 
                 <!-- Оформить заказ -->
                 <div id="order-form" class="card-body border-top d-none">
-                    <h4 class="card-title">Оформить заказ</h4>
+                    <h4 class="card-title">Buyurtmani rasmiylashtirish</h4>
                     <form class="d-flex flex-column flex-sm-row column-gap-3 row-gap-2" onsubmit="return validateForm()">
                         <div class="form-group w-100">
                             <label for="phone-num" class="d-none"></label>
                             <input type="text" value="+998" class="form-control" id="phone-num" required
-                                   placeholder="Ваш номер телефона">
+                                   placeholder="Telefon raqamingizni kiriting">
                         </div>
-                        <input type="submit" value="Заказать" class="btn btn-primary w-max-content order-btn w-100Mb">
+                        <input type="submit" value="Jo'natish" class="btn btn-primary w-max-content order-btn w-100Mb">
                     </form>
                 </div>
                 <!-- // Оформить заказ -->

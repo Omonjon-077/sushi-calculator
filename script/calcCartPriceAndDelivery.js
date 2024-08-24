@@ -12,14 +12,14 @@ function calcCartPriceAndDelivery() {
             currentPrice = parseInt(amountEl.innerText) * parseInt(priceEl.innerText);
         totalPrice += currentPrice;
     });
-    if (totalPrice >= 700) {
+    if (totalPrice >= 90000) {
         deliveryDescription.classList.add('d-none');
         deliveryCost.classList.add('free');
-        deliveryCost.innerText = 'бесплатно';
+        deliveryCost.innerText = 'Bepul';
     } else {
         deliveryCost.classList.remove('free');
         deliveryDescription.classList.remove('d-none');
-        deliveryCost.innerText = '250 ₽';
+        deliveryCost.innerText = '25000 so\'m';
         totalPrice += parseInt(deliveryCost.innerText);
     }
     if (cartWrapper.children.length === 0) {

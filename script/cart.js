@@ -22,7 +22,7 @@ window.addEventListener('click', (ev) => {
                 counterEl.innerText = parseInt(counterEl.innerText) + parseInt(productInfo.counter);
                 calcCartPriceAndDelivery();
             } else {
-                alert('На 1 товар нельзя добавить более 10!');
+                alert('1 ta mahsulotni 10 tadan ortiq qo\'shib bo\'lmaydi');
             }
         } else {
             const cartItemHtml = `
@@ -34,7 +34,7 @@ window.addEventListener('click', (ev) => {
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class="cart-item__desc">
 \t\t\t\t\t\t\t\t\t\t<div class="cart-item__title">${productInfo.title}</div>
-\t\t\t\t\t\t\t\t\t\t<div class="cart-item__weight"><span>${productInfo.itemsInBox}</span> шт. / <span>${productInfo.weight}</span>г.</div>
+\t\t\t\t\t\t\t\t\t\t<div class="cart-item__weight"><span>${productInfo.itemsInBox}</span> dona. / <span>${productInfo.weight}</span>g.</div>
 
 \t\t\t\t\t\t\t\t\t\t<!-- cart-item__details -->
 \t\t\t\t\t\t\t\t\t\t<div class="cart-item__details">
@@ -46,7 +46,7 @@ window.addEventListener('click', (ev) => {
 \t\t\t\t\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t\t\t\t\t<div class="price">
-\t\t\t\t\t\t\t\t\t\t\t\t<div class="price__currency"><span>${productInfo.price}</span> ₽</div>
+\t\t\t\t\t\t\t\t\t\t\t\t<div class="price__currency"><span>${productInfo.price}</span> so'm</div>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t\t\t\t</div>

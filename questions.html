@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Заказывайте суши 🍣, не выходя из дома">
+    <link rel="shortcut icon" href="./img/logo/logo.svg" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&amp;subset=cyrillic-ext"
+          rel="stylesheet">
+    <title>Магазин роллов</title>
+</head>
+
+<body class="">
+<!-- Уведомление -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="" class="rounded me-2" alt="...">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container text-center">
+        <span class="fs-1">🤔</span>
+        <div class="display-4">Promokod kerakmi ?</div>
+        <p class="lead mt-3"><strong>Omonjon Sobirov</strong> haqidagi 5 ta savoldan kamida<br> 3 tasiga to'g'ri javop
+            bering va promokod oling.</p>
+        <a href="index.html" class="mt-2 fw-semibold text-warning">Bosh sahifaga qaytish</a>
+    </div>
+</header>
+
+<section class="container pb-5 h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-lg-6 col-xl-5">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="d-flex flex-column align-items-center w-100 test-box">
+                    <div class="fs-5 d-flex flex-column row-gap-3" id="quiz"></div>
+                    <button type="button" class="btn btn-primary bg-warning border-warning rounded-3 mt-3 mx-auto"
+                            onclick="submitQuiz()">Javoplarni tekshirish
+                    </button>
+                    <div class="fs-4 fw-semibold mt-2 d-none promo">Siz ushbu promokodni yutib oldingiz: <span
+                            class="text-warning fw-bold fst-italic"></span></div>
+                    <div id="result" class="fs-5 fw-semibold mt-2 pb-lg-5 pb-4"></div>
+                </div>
+                <div class="warning-block text-center d-none">
+                    <div class="d-flex flex-column">
+                        <p class="fs-4 text-danger fw-bold mb-2">Siz testdan o'tib bo'lgansiz!!</p>
+                        <small>Agar yana testdan o'tmoqchi bo'lsangiz boshqa browserdan saytga kiring :)</small>
+                        <a href="index.html" class="mt-2 fw-semibold text-warning">Bosh sahifaga qaytish</a>
+                        <div class="fs-5 fw-semibold mt-2 pb-lg-5 pb-4 result"></div>
+                        <div class="fs-4 fw-semibold mt-2 have-promo d-none">Siz ushbu promokodni yutib olgansiz: <span id=""
+                                                                                                      class="text-warning fw-bold fst-italic"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Подключаем скрипты -->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="script/quiz.js"></script>
+<script src="script/promo.js"></script>
+<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="script/main.js"></script>
+</body>
+
+</html>

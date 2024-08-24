@@ -15,7 +15,14 @@ body, html {
 
 h3, h4 {
 	font-family: 'Merriweather', serif;
+}
 
+input[type=radio] {
+	accent-color: var(--bs-warning);
+}
+
+a {
+	text-decoration: none;
 }
 
 .header {
@@ -190,7 +197,7 @@ h3, h4 {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 575px) {
 	.details-wrapper {
 		padding: 0 30px;
 	}
