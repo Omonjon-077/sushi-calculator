@@ -25,6 +25,10 @@ a {
 	text-decoration: none;
 }
 
+.text-line-through {
+	text-decoration: line-through;
+}
+
 .header {
 	padding-top: 50px;
 	padding-bottom: 50px;

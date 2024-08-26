@@ -67,23 +67,48 @@
                             <span class="h5">Yetkazib berish:</span> <span class="delivery-cost">25 000 so'm</span>
                             <br> <span data-cart-delivery-description class="text-light-emphasis small ">90 000 so'm dan ortiq buyurtma berilsa bepul</span>
                         </p>
-                        <p><span class="h5">Jami:</span> <span class="total-price">0</span> <span
-                                class="rouble">so'm</span></p>
+                        <p><span class="h5">Jami:</span>
+                            <span class="text-danger"><span class="total-price">0</span> <span class="rouble">so'm</span></span>
+                            <span class="active-total text-success d-none"> <span class="active-total-price"></span> <span>so'm</span></span>
+                        </p>
                     </div>
                     <!-- // Стоимость заказа -->
 
                 </div>
 
                 <!-- Оформить заказ -->
-                <div id="order-form" class="card-body border-top d-none">
-                    <h4 class="card-title">Buyurtmani rasmiylashtirish</h4>
-                    <form class="d-flex flex-column flex-sm-row column-gap-3 row-gap-2" onsubmit="return validateForm()">
-                        <div class="form-group w-100">
-                            <label for="phone-num" class="d-none"></label>
-                            <input type="text" value="+998" class="form-control" id="phone-num" required
-                                   placeholder="Telefon raqamingizni kiriting">
+                <div id="order-form" class="card-body border-top d-none needs-validation" >
+                    <form class="row g-3 needs-validation" novalidate onsubmit="return validateForm()">
+                        <h4 class="card-title">Promokod qo'shish</h4>
+                        <div class="d-flex flex-column flex-sm-row column-gap-3 row-gap-2">
+                            <div class="w-100">
+                                <label for="promocode" class="form-label d-none">First name</label>
+                                <input type="text" id="promocode" class="form-control">
+                            </div>
+                            <button type="button" onclick="return checkPromo()" class="btn btn-primary w-max-content order-btn w-100Mb">Qo'shish</button>
                         </div>
-                        <input type="submit" value="Jo'natish" class="btn btn-primary w-max-content order-btn w-100Mb">
+                        <h4 class="card-title mt-3">Buyurtmani rasmiylashtirish</h4>
+                        <div class="col-12">
+                            <div class="form-group w-100">
+                                <label for="phone-num" class="d-none"></label>
+                                <input type="text" value="+998" class="form-control" id="phone-num" required
+                                       placeholder="Telefon raqamingizni kiriting">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Buyurtma berishga roziman
+                                </label>
+                                <div class="invalid-feedback">
+                                    Buyurtma berish uchun rozilik bildiring
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100" type="submit">Jo'natish</button>
+                        </div>
                     </form>
                 </div>
                 <!-- // Оформить заказ -->
@@ -105,6 +130,8 @@
 <script src="script/toggleCartStatus.js"></script>
 <script src="script/counter.js"></script>
 <script src="script/cart.js"></script>
+<script src="script/quiz.js"></script>
+<script src="script/promo.js"></script>
 <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="script/main.js"></script>
 </body>
