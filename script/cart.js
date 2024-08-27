@@ -22,7 +22,7 @@ window.addEventListener('click', (ev) => {
                 counterEl.innerText = parseInt(counterEl.innerText) + parseInt(productInfo.counter);
                 calcCartPriceAndDelivery();
             } else {
-                alert('1 ta mahsulotni 10 tadan ortiq qo\'shib bo\'lmaydi');
+                alert('1 ta mahsulotni 10 tadan ortiq qo\'shib bo\'lmaydi 😔');
             }
         } else {
             const cartItemHtml = `

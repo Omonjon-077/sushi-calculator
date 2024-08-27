@@ -34,7 +34,7 @@ if ($('#phone-num').length) {
     function validateForm() {
         let x = document.querySelector('#phone-num').value;
         if (x.length <= 16) {
-            alert("Telefon raqamingizni to'liq kiriting!");
+            alert("Telefon raqamingizni to'liq kiriting ☎");
             return false;
         }
     }
@@ -42,23 +42,36 @@ if ($('#phone-num').length) {
 
 // Function for promo check
 if ($('#promocode').length) {
-    let promoInput = document.querySelector('#promocode');
-    function checkPromo() {
+    let promoInput = document.querySelector('#promocode'),
+        addPromoCode = document.querySelector('.add-promo'),
+        removePromoCode = document.querySelector('.remove-promo');
+
+    addPromoCode.addEventListener('click', () => {
         if (promoInput.value == '') {
-            alert(`Iltimos promokodni kiriting!`)
-        } else if (promoInput.value == activePromo.name) {
+            alert(`Iltimos promokodni kiriting 👀`)
+        } else if (activePromo == null) {
+            alert(`Siz bunday promokod yutib olmagansiz 😑`)
+        } else if (promoInput.value == activePromo.name){
             let totalPriceEl = document.querySelector('.total-price'),
                 activeTotalPrice = document.querySelector('.active-total-price');
             document.querySelector('.active-total').classList.remove('d-none');
             document.querySelector('.cart-total .text-danger').classList.add('text-line-through');
-            totalPriceEl.classList.add('text-line-through');
+            addPromoCode.classList.add('d-none');
+            removePromoCode.classList.remove('d-none');
             let totalPrice = totalPriceEl.innerText;
             totalPrice -= activePromo.price;
             activeTotalPrice.innerText = totalPrice;
         } else {
-            alert(`Siz bunday promokod yutib olmagansiz yoki nato'g'ri kiritgansiz!`)
+            alert(`Siz promokodni nato'g'ri kiritmoqdasiz 🤦‍♂️`)
         }
-    }
+    });
+    removePromoCode.addEventListener('click', () => {
+        promoInput.value = '';
+        removePromoCode.classList.add('d-none');
+        addPromoCode.classList.remove('d-none');
+        document.querySelector('.cart-total .text-danger').classList.remove('text-line-through');
+        document.querySelector('.active-total').classList.add('d-none');
+    });
 }
 
 

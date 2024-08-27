@@ -33,7 +33,7 @@ if ($('.questions-page').length) {
             correct: "b"
         },
         {
-            question: "Qaysi maktabda o'qigan?",
+            question: "Nechanchi maktabda o'qigan?",
             a: "26",
             b: "40",
             c: "1",
@@ -81,12 +81,12 @@ if ($('.questions-page').length) {
             correct: "a"
         },
         {
-            question: "Qaysi notebook turini yoqtiradi?",
-            a: "MacBook",
-            b: "Asus Rog",
-            c: "Asus Vivobook",
-            d: "Asus Zenbook",
-            correct: "a"
+            question: "Qaysi kompaniyani notebookini ishlatadi?",
+            a: "Apple",
+            b: "Asus",
+            c: "HP",
+            d: "Acer",
+            correct: "b"
         },
         {
             question: "Qaysi taxallus bilan ko'p o'zini ataydi?",
@@ -107,7 +107,7 @@ if ($('.questions-page').length) {
         {
             question: "Qaysi mashina kompaniyasini yoqtiradi?",
             a: "BMW",
-            b: "Mercedes Benz",
+            b: "Mercedes-Benz",
             c: "Porsche",
             d: "Audi",
             correct: "b"
@@ -126,6 +126,54 @@ if ($('.questions-page').length) {
             b: "Manchester City",
             c: "Manchester United",
             d: "Real Madrid",
+            correct: "d"
+        },
+        {
+            question: "Telefon raqamining oxiri nechi?",
+            a: "82-84",
+            b: "82-83",
+            c: "83-82",
+            d: "84-82",
+            correct: "d"
+        },
+        {
+            question: "Hozirda telefon rusumi qanday?",
+            a: "iPhone15ProMax",
+            b: "iPhone15Pro",
+            c: "iPhone14ProMax",
+            d: "iPhone14Pro",
+            correct: "d"
+        },
+        {
+            question: "1 chi farzandi kim bo'lishini hohlagan bo'lardi?",
+            a: "O'g'il",
+            b: "Qiz",
+            c: "Egizaklar",
+            d: "Aniqlashtirmagan",
+            correct: "b"
+        },
+        {
+            question: "Qaysi Universitetda o'qiydi?",
+            a: "TATU",
+            b: "TDPU",
+            c: "TAQU",
+            d: "WEST",
+            correct: "c"
+        },
+        {
+            question: "Hozirda kim bo'lish ishlaydi?",
+            a: "Programmer",
+            b: "Video maker",
+            c: "Photographer",
+            d: "Project manager",
+            correct: "c"
+        },
+        {
+            question: "Hozirda qaysi kompaniyada ishlaydi?",
+            a: "Trigger",
+            b: "Samsung",
+            c: "Safouz",
+            d: "Barchasi",
             correct: "d"
         }
     ];

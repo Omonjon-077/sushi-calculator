@@ -175,6 +175,10 @@ a {
 	margin-left: 15px;
 }
 
+button {
+	cursor: pointer;
+}
+
 .cart-total {
 	font-size: 18px;
 	font-weight: 500;

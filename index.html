@@ -35,7 +35,9 @@
         <img src="img/logo/logo.svg" width="92" alt="Суши и пицца">
         <div class="display-4">Sushi va Rollar</div>
         <p class="lead">Mazali va yoqimli</p>
-        <p class="text-secondary fw-bold fs-6">Savollarga javop bering va promokod oling, <a href="questions.html" class="text-warning">bu yerda</a></p>
+        <p class="text-secondary fw-bold fs-6">Savollarga javop bering va promokod oling, <a href="questions.html"
+                                                                                             class="text-warning">bu
+            yerda</a></p>
     </div>
 </header>
 
@@ -68,8 +70,10 @@
                             <br> <span data-cart-delivery-description class="text-light-emphasis small ">90 000 so'm dan ortiq buyurtma berilsa bepul</span>
                         </p>
                         <p><span class="h5">Jami:</span>
-                            <span class="text-danger"><span class="total-price">0</span> <span class="rouble">so'm</span></span>
-                            <span class="active-total text-success d-none"> <span class="active-total-price"></span> <span>so'm</span></span>
+                            <span class="text-danger"><span class="total-price">0</span> <span
+                                    class="rouble">so'm</span></span>
+                            <span class="active-total free d-none"> <span
+                                    class="active-total-price"></span> <span>so'm</span></span>
                         </p>
                     </div>
                     <!-- // Стоимость заказа -->
@@ -77,7 +81,7 @@
                 </div>
 
                 <!-- Оформить заказ -->
-                <div id="order-form" class="card-body border-top d-none needs-validation" >
+                <div id="order-form" class="card-body border-top d-none needs-validation">
                     <form class="row g-3 needs-validation" novalidate onsubmit="return validateForm()">
                         <h4 class="card-title">Promokod qo'shish</h4>
                         <div class="d-flex flex-column flex-sm-row column-gap-3 row-gap-2">
@@ -85,7 +89,12 @@
                                 <label for="promocode" class="form-label d-none">First name</label>
                                 <input type="text" id="promocode" class="form-control">
                             </div>
-                            <button type="button" onclick="return checkPromo()" class="btn btn-primary w-max-content order-btn w-100Mb">Qo'shish</button>
+                            <button type="button" class="btn btn-primary add-promo w-max-content order-btn w-100Mb">
+                                Qo'shish
+                            </button>
+                            <button type="button"
+                                    class="btn btn-danger d-flex align-items-center justify-content-center w-max-content remove-promo order-btn d-none w-100Mb">
+                                <i class='bx bx-x fs-4'></i></button>
                         </div>
                         <h4 class="card-title mt-3">Buyurtmani rasmiylashtirish</h4>
                         <div class="col-12">

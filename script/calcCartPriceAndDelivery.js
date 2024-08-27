@@ -3,14 +3,21 @@ function calcCartPriceAndDelivery() {
         totalPriceEl = document.querySelector('.total-price'),
         cartWrapper = document.querySelector('.cart-wrapper'),
         deliveryDescription = document.querySelector('.cart-total [data-cart-delivery-description]'),
-        deliveryCost = document.querySelector('.delivery-cost');
+        deliveryCost = document.querySelector('.delivery-cost'),
+        promoInput = document.querySelector('#promocode'),
+        activeTotalPrice = document.querySelector('.active-total-price');
     let totalPrice = 0;
 
     cartItems.forEach(function (item) {
         const amountEl = item.querySelector('[data-counter]'),
             priceEl = item.querySelector('.price__currency'),
             currentPrice = parseInt(amountEl.innerText) * parseInt(priceEl.innerText);
-        totalPrice += currentPrice;
+        if (activePromo == null) {
+            totalPrice += currentPrice;
+        } else {
+            totalPrice += currentPrice;
+            activeTotalPrice.innerText = totalPrice - activePromo.price;
+        }
     });
     if (totalPrice >= 90000) {
         deliveryDescription.classList.add('d-none');

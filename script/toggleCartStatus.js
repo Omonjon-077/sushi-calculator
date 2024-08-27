@@ -12,6 +12,8 @@ function toggleCartStatus() {
     } else {
         delivery.classList.add('d-none');
         cartEmptyBadge.classList.remove('d-none');
+        document.querySelector('.active-total').classList.add('d-none');
+        document.querySelector('.cart-total .text-danger').classList.remove('text-line-through');
         cartOrder.classList.add('d-none');
     }
 }
