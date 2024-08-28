@@ -1,13 +1,11 @@
+// Tel nomerga mask qoyish
 if ($('#phone-num').length) {
-    IMask(
-        document.getElementById('phone-num'),
-        {
-            mask: '+{998}(00)000-00-00'
-        }
-    );
+    IMask(document.getElementById('phone-num'), {
+        mask: '+{998}(00)000-00-00'
+    });
 }
 
-// script for validate form
+// Validatsiyani tekshirish bootstrap
 if ($('.needs-validation').length) {
     (() => {
         'use strict'
@@ -29,7 +27,7 @@ if ($('.needs-validation').length) {
     })()
 }
 
-// Function for phone number field
+// Tel raqamni toliq kirgazishni tekshirish
 if ($('#phone-num').length) {
     function validateForm() {
         let x = document.querySelector('#phone-num').value;
@@ -40,10 +38,9 @@ if ($('#phone-num').length) {
     }
 }
 
-// Function for promo check
+// Promokod bor yoki yoqligini tekshirish
 if ($('#promocode').length) {
-    let promoInput = document.querySelector('#promocode'),
-        addPromoCode = document.querySelector('.add-promo'),
+    let promoInput = document.querySelector('#promocode'), addPromoCode = document.querySelector('.add-promo'),
         removePromoCode = document.querySelector('.remove-promo');
 
     addPromoCode.addEventListener('click', () => {
@@ -51,7 +48,7 @@ if ($('#promocode').length) {
             alert(`Iltimos promokodni kiriting 👀`)
         } else if (activePromo == null) {
             alert(`Siz bunday promokod yutib olmagansiz 😑`)
-        } else if (promoInput.value == activePromo.name){
+        } else if (promoInput.value == activePromo.name) {
             let totalPriceEl = document.querySelector('.total-price'),
                 activeTotalPrice = document.querySelector('.active-total-price');
             document.querySelector('.active-total').classList.remove('d-none');
@@ -65,6 +62,7 @@ if ($('#promocode').length) {
             alert(`Siz promokodni nato'g'ri kiritmoqdasiz 🤦‍♂️`)
         }
     });
+    // Promokodni olib tashlash
     removePromoCode.addEventListener('click', () => {
         promoInput.value = '';
         removePromoCode.classList.add('d-none');

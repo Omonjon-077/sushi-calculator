@@ -4,14 +4,15 @@ function calcCartPriceAndDelivery() {
         cartWrapper = document.querySelector('.cart-wrapper'),
         deliveryDescription = document.querySelector('.cart-total [data-cart-delivery-description]'),
         deliveryCost = document.querySelector('.delivery-cost'),
-        promoInput = document.querySelector('#promocode'),
         activeTotalPrice = document.querySelector('.active-total-price');
     let totalPrice = 0;
 
+    // Mahsulotlarni narxini hisoblash
     cartItems.forEach(function (item) {
         const amountEl = item.querySelector('[data-counter]'),
             priceEl = item.querySelector('.price__currency'),
             currentPrice = parseInt(amountEl.innerText) * parseInt(priceEl.innerText);
+        // Promokodni bor yoki yo'qligiga qarab hisoblash
         if (activePromo == null) {
             totalPrice += currentPrice;
         } else {
@@ -19,6 +20,7 @@ function calcCartPriceAndDelivery() {
             activeTotalPrice.innerText = totalPrice - activePromo.price;
         }
     });
+    // Jami 90.000 somdan oshsa dostafkani bepul qilish bolmasa pullik
     if (totalPrice >= 90000) {
         deliveryDescription.classList.add('d-none');
         deliveryCost.classList.add('free');
@@ -29,6 +31,7 @@ function calcCartPriceAndDelivery() {
         deliveryCost.innerText = '25000 so\'m';
         totalPrice += parseInt(deliveryCost.innerText);
     }
+    // Savat bosh bolsa jami summani 0 ga tenglash bolmasa oz holidek qolish
     if (cartWrapper.children.length === 0) {
         totalPrice = 0;
         totalPriceEl.innerText = totalPrice;

@@ -17,6 +17,10 @@ h3, h4 {
 	font-family: 'Merriweather', serif;
 }
 
+.transition {
+	transition: .4s;
+}
+
 input[type=radio] {
 	accent-color: var(--bs-warning);
 }
@@ -204,6 +208,35 @@ button {
 	display: none;
 }
 
+#countdown {
+	font-size: 1.25rem;
+	color: #f9ed69;
+	text-align: center;
+	padding: 12px 15px;
+	background-color: #162447;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	border: 2px solid #eb5a1e;
+	margin: 20px 20px 0 0;
+}
+
+#countdown span {
+	display: inline-block;
+	min-width: 35px;
+}
+
+#countdown .minutes {
+	color: #e43f5a;
+}
+
+#countdown .seconds {
+	color: #f9ed69;
+}
+
+#countdown .label {
+	font-size: .85rem;
+	color: #f9ed69;
+}
 
 @media (max-width: 575px) {
 	.details-wrapper {

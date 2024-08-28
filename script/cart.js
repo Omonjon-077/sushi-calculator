@@ -16,6 +16,7 @@ window.addEventListener('click', (ev) => {
 
         const itemInCart = cartWrapper.querySelector(`[data-id="${productInfo.id}"]`);
 
+        // Mahsulot savatda bolsa uning sonini oshirish 10tagacha
         if (itemInCart) {
             const counterEl = itemInCart.querySelector('[data-counter]');
             if ((parseInt(counterEl.innerText) + parseInt(productInfo.counter)) <= 10) {
@@ -24,7 +25,7 @@ window.addEventListener('click', (ev) => {
             } else {
                 alert('1 ta mahsulotni 10 tadan ortiq qo\'shib bo\'lmaydi 😔');
             }
-        } else {
+        } else { // Mahsulot savatda bolmasa uni qoshish
             const cartItemHtml = `
         <!-- Cart item -->
 \t\t\t\t\t\t\t<div class="cart-item" title="${productInfo.title}" data-id="${productInfo.id}">

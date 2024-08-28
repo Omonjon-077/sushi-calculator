@@ -26,10 +26,11 @@ window.addEventListener('click', (ev) => {
         }
     }
 
+
     if (ev.target.hasAttribute('data-action') && ev.target.closest('.cart-wrapper')) {
         calcCartPriceAndDelivery();
     }
-
+    // O'chirish btn bosganda osha mahsulotni olib tashlash va jami narxdan minus qlish
     if (ev.target.classList.contains('del-item')) {
         ev.target.closest('.cart-item').remove();
         toggleCartStatus();

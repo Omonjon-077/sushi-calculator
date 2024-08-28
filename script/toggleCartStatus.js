@@ -4,7 +4,7 @@ function toggleCartStatus() {
         delivery = document.querySelector('.cart-total [data-cart-delivery]'),
         cartOrder = document.querySelector('#order-form');
 
-
+    // Savatda narsa bor yoki yoqligini tekshirish
     if (cartWrapper.children.length > 0) {
         delivery.classList.remove('d-none');
         cartEmptyBadge.classList.add('d-none');
