@@ -17,6 +17,24 @@ h3, h4 {
 	font-family: 'Merriweather', serif;
 }
 
+.primary-shadow {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.fs-6 {
+	font-size: 1.125rem !important;
+}
+
+.fs-7 {
+	font-size: 1rem !important;
+}
+
+.protest-guerrilla-regular {
+	font-family: "Protest Guerrilla", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
 .transition {
 	transition: .4s;
 }

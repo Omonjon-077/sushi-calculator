@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!--  Site Description  -->
     <meta name="description" content="Заказывайте суши 🍣, не выходя из дома">
+    <!--  Site Favicon  -->
     <link rel="shortcut icon" href="./img/logo/logo.svg" type="image/x-icon">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style/main.css">
+    <!--  Google Fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&amp;subset=cyrillic-ext"
           rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <!--  Icons  -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!--  Styles  -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
     <title>Sushi Shop</title>
 </head>
 
@@ -83,23 +91,35 @@
                 <!-- Оформить заказ -->
                 <div id="order-form" class="card-body border-top d-none needs-validation">
                     <form class="row g-3 needs-validation" novalidate onsubmit="return validateForm()">
-                        <h4 class="card-title">Promokod qo'shish</h4>
-                        <div class="d-flex flex-column flex-sm-row column-gap-3 row-gap-2">
+                        <div class="d-flex flex-column flex-sm-row column-gap-3 row-gap-2 mt-3">
                             <div class="w-100">
-                                <label for="promocode" class="form-label d-none">First name</label>
+                                <label for="promocode" class="card-title fs-4">Promokod qo'shish</label>
                                 <input type="text" id="promocode" class="form-control">
                             </div>
-                            <button type="button" class="btn btn-primary add-promo w-max-content order-btn w-100Mb">
+                            <button type="button" class="btn btn-primary add-promo w-max-content order-btn mt-auto w-100Mb" style="height: 38px">
                                 Qo'shish
                             </button>
-                            <button type="button"
-                                    class="btn btn-danger d-flex align-items-center justify-content-center w-max-content remove-promo order-btn d-none w-100Mb">
+                            <button type="button" style="height: 38px"
+                                    class="btn btn-danger d-flex align-items-center justify-content-center w-max-content remove-promo order-btn d-none w-100Mb mt-auto">
                                 <i class='bx bx-x fs-4'></i></button>
                         </div>
-                        <h4 class="card-title mt-3">Buyurtmani rasmiylashtirish</h4>
-                        <div class="col-12">
+                        <div class="col-12 mt-0">
                             <div class="form-group w-100">
-                                <label for="phone-num" class="d-none"></label>
+                                <label for="location" class="card-title mt-3 fs-4">Manzilingizni kiriting</label>
+                                <input type="text" class="form-control" id="location" required
+                                       placeholder="Masalan: Chinoz tumani, Alisher to'yxonasi yoni">
+                            </div>
+                        </div>
+                        <div class="col-12 mt-0">
+                            <div class="form-group w-100">
+                                <label for="massage" class="card-title mt-3 fs-4">Yetkazuvchi uchun xabar qoldirish</label>
+                                <textarea type="text" class="form-control" id="massage" style="resize: none" rows="4"
+                                          placeholder="Masalan: Salfetka va ketchub olvoling"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-0">
+                            <div class="form-group w-100">
+                                <label for="phone-num" class="card-title fs-4 mt-3">Buyurtmani rasmiylashtirish</label>
                                 <input type="text" value="+998" class="form-control" id="phone-num" required
                                        placeholder="Telefon raqamingizni kiriting">
                             </div>
@@ -128,6 +148,9 @@
 
         </div>
     </div>
+    <p class="fs-5 fw-semibold protest-guerrilla-regular text-black text-center mt-4">Developed by <a
+            href="https://omonjon.triger.uz" style="color: #eb5a1e;" class="fs-4 fw-bold fst-italic">Omonjon Sobirov</a>
+    </p>
 </div>
 
 <!-- Подключаем скрипты -->

@@ -45,11 +45,11 @@ if ($('.questions-page').length) {
             correct: "a"
         },
         {
-            question: "Agar u to'g'ri bo'lsa, bu nima?",
-            a: "Xato",
-            b: "Haqiqat",
-            c: "Yolg'on",
-            d: "Savol",
+            question: "5 + 7 * 2 - 3 = ?",
+            a: "12",
+            b: "16",
+            c: "18",
+            d: "21",
             correct: "b"
         },
         {
@@ -69,19 +69,19 @@ if ($('.questions-page').length) {
             correct: "c"
         },
         {
-            question: "Qaysi biri to'rtta burchakka ega, ammo hech qanday burchakda burchaklar mavjud emas?",
-            a: "Uchburchak",
-            b: "To'rtburchak",
-            c: "Aylana",
-            d: "Kub",
+            question: "Jahondagi eng katta cho'l qaysi?",
+            a: "Kalahari cho'li",
+            b: "Sahara cho'li",
+            c: "Sahroyi Kabir",
+            d: "Gobi cho'li",
             correct: "c"
         },
         {
-            question: "Bu nima: Ko'z bilan ko'rinmaydi, og'iz bilan tatib bo'lmaydi, lekin his qilish mumkin?",
-            a: "Yangi hid",
-            b: "Qiyin so'z",
-            c: "Havo",
-            d: "Sevgi",
+            question: "Buyuk Ipak Yo'li qaysi hududlardan o'tgan?",
+            a: "Afrika va Yevropa",
+            b: "Osiyo va Afrika",
+            c: "Osiyo va Yevropa",
+            d: "Shimoliy Amerika va Janubiy Amerika",
             correct: "d"
         },
         {
@@ -93,28 +93,28 @@ if ($('.questions-page').length) {
             correct: "c"
         },
         {
-            question: "Agar sizda bo’lsa, uni baham ko’rishni xohlaysiz. Agar baham ko’rgan bo’lsangiz, endi sizda yo’q. Nimaligini toping?",
-            a: "Pul",
-            b: "Sir",
-            c: "Bilim",
-            d: "Uy",
-            correct: "b"
+            question: "Qaysi daryo Yevropaning eng uzun daryosi hisoblanadi?",
+            a: "Volga",
+            b: "Ren",
+            c: "Dunay",
+            d: "Elba",
+            correct: "a"
         },
         {
             question: "Bir hovuch suvni qanday ushlab tursangiz, u sizdan oqib ketmaydi?",
             a: "Qo'l bilan",
             b: "Muzga aylantirib",
-            c: "Stakanga quyib",
+            c: "Hech qanday",
             d: "Shlang bilan",
             correct: "b"
         },
         {
-            question: "Agar bitta olmani ikkiga bo'lsangiz, u nima bo'ladi?",
-            a: "To'liq olmaga aylanadi",
-            b: "Ikkita bo'lak bo'ladi",
-            c: "Kamayadi",
-            d: "Olmani bir xil bo'lakka bo'lasiz",
-            correct: "b"
+            question: "Quyosh sistemasidagi eng katta sayyora qaysi?",
+            a: "Neptun",
+            b: "Mars",
+            c: "Yupiter",
+            d: "Saturn",
+            correct: "c"
         },
         {
             question: "Bir kishi orqaga qadam tashlasa, u oldinga yurayotganida nimani yo'qotadi?",
@@ -125,11 +125,11 @@ if ($('.questions-page').length) {
             correct: "a"
         },
         {
-            question: " Bu nima: Har yili bir marta keladi, lekin o'sha yil oxirida tugaydi?",
-            a: "Tug'ilgan kun",
-            b: "Yangi yil",
-            c: "Dekabr",
-            d: "Rojdestvo",
+            question: "Yorug'lik tezligi qanday?",
+            a: "300 000 km/soat",
+            b: "300 000 km/soniya",
+            c: "150 000 km/soniya",
+            d: "100 000 km/soniya",
             correct: "b"
         },
         {
@@ -141,28 +141,28 @@ if ($('.questions-page').length) {
             correct: "a"
         },
         {
-            question: "Qaysi narsa xonasiz uyga ega bo'lishi mumkin?",
-            a: "Qovoq",
-            b: "Kitob",
-            c: "Qopqoq",
-            d: "Daraxt",
+            question: "Dunyo okeanidagi eng chuqur joy qaysi?",
+            a: "Challenger chuqurligi",
+            b: "Tonga chuqurligi",
+            c: "Mariana chuqurligi",
+            d: "Java chuqurligi",
+            correct: "c"
+        },
+        {
+            question: "Kompyuterning markaziy protsessori qanday qisqacha ataladi?",
+            a: "GPU",
+            b: "RAM",
+            c: "CPU",
+            d: "SSD",
+            correct: "b"
+        },
+        {
+            question: "12 + (6 / 2) * 3 = ?",
+            a: "30",
+            b: "25",
+            c: "27",
+            d: "21",
             correct: "d"
-        },
-        {
-            question: "Biror kishi bitta ko'zini yuma oladi, lekin boshqa ko'zini yuma olmasa, nima bo'ladi?",
-            a: "Ko'rolmaydi",
-            b: "Ko'rishni davom ettiradi",
-            c: "Yaxshi ko'rishni boshlaydi",
-            d: "Ko'r bo'lib qoladi",
-            correct: "b"
-        },
-        {
-            question: "Bir odam tog'dan pastga tushayotganda 100 marta yiqiladi. Nega u biror marta shikastlanmaydi?",
-            a: "U yostiq olib yuradi",
-            b: "U tushayotganiga o'xshamaydi",
-            c: "U har safar sakrab tushadi",
-            d: "U pastda suzadi",
-            correct: "b"
         },
         {
             question: "Bu nima: Sizni har doim ta'qib qiladi, lekin siz uni tutolmaysiz?",
@@ -173,19 +173,19 @@ if ($('.questions-page').length) {
             correct: "a"
         },
         {
-            question: "Bu nima: Agar siz undan foydalanmasangiz, u o'likdek bo'ladi, lekin undan foydalanishingiz bilan u tiriladi?",
-            a: "Elektr chiroq",
-            b: "Boshqotirma",
-            c: "Radiatsiya",
-            d: "Qalam",
-            correct: "d"
+            question: "Qaysi qit'a eng katta?",
+            a: "Yevropa",
+            b: "Afrika",
+            c: "Osiyo",
+            d: "Shimoliy Amerika",
+            correct: "c"
         },
         {
-            question: "Qaysi biri ko'proq gapiradi: til yoki og'iz?",
-            a: "Til",
-            b: "Og'iz",
-            c: "Gapiruvchi odam",
-            d: "To'g'ri javob yo'q",
+            question: "Quyosh sistemasida qaysi sayyora Yerdan eng yaqin bo‘ladi?",
+            a: "Venera",
+            b: "Mars",
+            c: "Merkuri",
+            d: "Saturn",
             correct: "c"
         },
         {
@@ -195,6 +195,14 @@ if ($('.questions-page').length) {
             c: "Tosh",
             d: "G'isht",
             correct: "c"
+        },
+        {
+            question: "Qaysi organizm fotosintez jarayonini amalga oshiradi?",
+            a: "Bakteriya",
+            b: "Hayvon",
+            c: "Qo‘ziqorin",
+            d: "O‘simlik",
+            correct: "d"
         }
     ];
 
@@ -215,16 +223,16 @@ if ($('.questions-page').length) {
         quiz.classList.remove('d-none');
         randomElements.forEach((item, index) => {
             quiz.innerHTML += `
-                <div class="question">
-                    <p class="mb-1 fs-4 fw-semibold fst-italic">${index + 1}. ${item.question}</p>
+                <div class="question rounded-4 bg-white primary-shadow p-3">
+                    <p class="mb-1 fs-6 fw-semibold fst-italic">${index + 1}. ${item.question}</p>
                     <input type="radio" required id="q${index}_a" name="q${index}" value="a">
-                    <label class="" for="q${index}_a">${item.a}</label><br>
+                    <label class="fs-7" for="q${index}_a">${item.a}</label><br>
                     <input type="radio" required id="q${index}_b" name="q${index}" value="b">
-                    <label class="" for="q${index}_b">${item.b}</label><br>
+                    <label class="fs-7" for="q${index}_b">${item.b}</label><br>
                     <input type="radio" required id="q${index}_c" name="q${index}" value="c">
-                    <label class="" for="q${index}_c">${item.c}</label><br>
+                    <label class="fs-7" for="q${index}_c">${item.c}</label><br>
                     <input type="radio" required id="q${index}_d" name="q${index}" value="d">
-                    <label class="" for="q${index}_d">${item.d}</label>
+                    <label class="fs-7" for="q${index}_d">${item.d}</label>
                 </div>
             `;
         });
@@ -259,7 +267,6 @@ if ($('.questions-page').length) {
             document.getElementById('countdown').classList.add('d-none');
         }
         // User test natijinni bilganda localga yozib qoyish
-        localStorage.setItem('test', 'active');
         localStorage.setItem('score', score);
         document.getElementById('result').innerText = `Siz ${randomElements.length} ta savoldan ${score} ta topdingiz`;
     });
@@ -268,6 +275,7 @@ if ($('.questions-page').length) {
     quizStartBtn.addEventListener('click', () => {
         document.querySelector('#quiz-block').classList.remove('d-none');
         quizStartBtn.classList.add('d-none');
+        localStorage.setItem('test', 'active');
         document.getElementById('countdown').classList.remove('d-none');
         document.getElementById('warning-text').classList.remove('d-none');
         countdown();
