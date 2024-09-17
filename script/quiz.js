@@ -82,7 +82,7 @@ if ($('.questions-page').length) {
             b: "Osiyo va Afrika",
             c: "Osiyo va Yevropa",
             d: "Shimoliy Amerika va Janubiy Amerika",
-            correct: "d"
+            correct: "c"
         },
         {
             question: "Qaysi yo'ldan o'tganingda orqaga qayta olmaysan?",
@@ -154,7 +154,7 @@ if ($('.questions-page').length) {
             b: "RAM",
             c: "CPU",
             d: "SSD",
-            correct: "b"
+            correct: "c"
         },
         {
             question: "12 + (6 / 2) * 3 = ?",
@@ -194,7 +194,7 @@ if ($('.questions-page').length) {
             b: "Pat",
             c: "Tosh",
             d: "G'isht",
-            correct: "c"
+            correct: "b"
         },
         {
             question: "Qaysi organizm fotosintez jarayonini amalga oshiradi?",

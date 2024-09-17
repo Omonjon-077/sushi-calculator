@@ -27,17 +27,6 @@ if ($('.needs-validation').length) {
     })()
 }
 
-// Tel raqamni toliq kirgazishni tekshirish
-if ($('#phone-num').length) {
-    function validateForm() {
-        let x = document.querySelector('#phone-num').value;
-        if (x.length <= 16) {
-            alert("Telefon raqamingizni to'liq kiriting ☎");
-            return false;
-        }
-    }
-}
-
 // Promokod bor yoki yoqligini tekshirish
 if ($('#promocode').length) {
     let promoInput = document.querySelector('#promocode'), addPromoCode = document.querySelector('.add-promo'),
