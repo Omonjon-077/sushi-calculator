@@ -71,7 +71,7 @@ if ($('.questions-page').length) {
         {
             question: "Jahondagi eng katta cho'l qaysi?",
             a: "Kalahari cho'li",
-            b: "Sahara cho'li",
+            b: "Qizilqum cho'li",
             c: "Sahroyi Kabir",
             d: "Gobi cho'li",
             correct: "c"
@@ -224,7 +224,7 @@ if ($('.questions-page').length) {
         randomElements.forEach((item, index) => {
             quiz.innerHTML += `
                 <div class="question rounded-4 bg-white primary-shadow p-3">
-                    <p class="mb-1 fs-6 fw-semibold fst-italic">${index + 1}. ${item.question}</p>
+                    <p class="mb-1 fs-6 fw-semibold fst-italic no-copy">${index + 1}. ${item.question}</p>
                     <input type="radio" required id="q${index}_a" name="q${index}" value="a">
                     <label class="fs-7" for="q${index}_a">${item.a}</label><br>
                     <input type="radio" required id="q${index}_b" name="q${index}" value="b">
@@ -283,7 +283,7 @@ if ($('.questions-page').length) {
 
     // User test boshlagandagi countdown function
     function countdown() {
-        // 1.5 minut (90 soniya)
+        // 2 minut (120 soniya)
         let timeLeft = 120;
 
         function updateTimer() {

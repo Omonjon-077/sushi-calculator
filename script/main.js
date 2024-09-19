@@ -61,6 +61,18 @@ if ($('#promocode').length) {
     });
 }
 
+// Sahifadagi no-copy classga ega elementlarda copy hodisasini o'chirib qo'yamiz
+document.addEventListener('copy', function(event) {
+    const selection = window.getSelection().toString();
+    const noCopyElements = document.querySelectorAll('.no-copy');
+
+    noCopyElements.forEach(element => {
+        if (element.contains(window.getSelection().anchorNode)) {
+            event.preventDefault(); // Copy qilishni bloklaydi
+            alert('Matnni nusxa ko\'chirish taqiqlangan!');
+        }
+    });
+});
 
 // Function for toasts when click btn
 const toastTrigger = document.getElementById('liveToastBtn')

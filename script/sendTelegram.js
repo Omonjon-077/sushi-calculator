@@ -47,8 +47,6 @@ form.addEventListener("submit", (e) => {
 
     if (userPhone.value.length <= 16) {
         alert("Telefon raqamingizni to'liq kiriting ☎");
-    } else if (userName.value === "" || userLocation.value === "") {
-        alert("Ma'lumotlar to'liq kiritilmagan!");
     } else {
         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${sendMessage}`, {
             method: "GET"
@@ -59,6 +57,7 @@ form.addEventListener("submit", (e) => {
                 userLocation.value = "";
                 userMessage.value = "";
                 toast.classList.add("show");
+                document.querySelector('.form-check-input').checked = false;
                 setTimeout(function () {
                     toast.classList.remove("show");
                 }, 5000);

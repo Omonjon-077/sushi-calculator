@@ -29,6 +29,13 @@ h3, h4 {
 	font-size: 1rem !important;
 }
 
+.no-copy {
+	user-select: none; /* Matn tanlanishini bloklaydi */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
 .protest-guerrilla-regular {
 	font-family: "Protest Guerrilla", sans-serif;
 	font-weight: 400;
