@@ -190,7 +190,7 @@ if ($('.questions-page').length) {
         },
         {
             question: "Yerdan osonlikcha ko’tarish mumkin, lekin uni uzoqqa otib bo’lmaydi. Bu nima?",
-            a: "Qum",
+            a: "Salyut",
             b: "Pat",
             c: "Tosh",
             d: "G'isht",
