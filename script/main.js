@@ -1,3 +1,12 @@
+// Loader
+document.addEventListener('DOMContentLoaded', function (eventObject) {
+    $('.load').fadeIn();
+})
+window.addEventListener("load", function (eventObject) {
+    $('.load').fadeOut("slow");
+
+});
+
 // Tel nomerga mask qoyish
 if ($('#phone-num').length) {
     IMask(document.getElementById('phone-num'), {

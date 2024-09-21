@@ -23,6 +23,12 @@
 </head>
 
 <body class="">
+<!-- Loader -->
+<div class="load" id="load">
+    <lottie-player autoplay loop mode="normal" src="jsons/loader.json" class="load-gif">
+    </lottie-player>
+</div>
+
 <!-- Уведомление -->
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -162,6 +168,7 @@
 <!-- Подключаем скрипты -->
 <script src="libs/jquery/jquery.min.js"></script>
 <script src="https://unpkg.com/imask"></script>
+<script src="libs/lottie-player.js"></script>
 <script src="script/products.js" type="module"></script>
 <script src="script/productGenerate.js" type="module"></script>
 <script src="script/calcCartPriceAndDelivery.js"></script>

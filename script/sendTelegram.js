@@ -5,7 +5,7 @@ let form = document.querySelector(".needs-validation"),
 // FOR SEND BOT
 let bot = {
     TOKEN: "7244017061:AAEKlZM-uhpGl6PvLAvWgAJJEuU848CQ4HA",
-    chatID: "-4536220519",
+    chatID: "-1002488322132", // Agar botning o'zigagina xabar jo'natilsa ID shunday qoladi agar guruhga bolsa boshiga tire "-" qo'yish kerak
 }
 
 form.addEventListener("submit", (e) => {
