@@ -31,7 +31,7 @@ function calcCartPriceAndDelivery() {
         deliveryCost.innerText = '25000 so\'m';
         totalPrice += parseInt(deliveryCost.innerText);
     }
-    // Savat bosh bolsa jami summani 0 ga tenglash bolmasa oz holidek qolish
+    // Savat bosh bolsa jami summani 0 ga tenglash bolmasa o'z holidek qolish
     if (cartWrapper.children.length === 0) {
         totalPrice = 0;
         totalPriceEl.innerText = totalPrice;

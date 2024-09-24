@@ -1,5 +1,6 @@
 /*=============== TELEGRAM BOT ===============*/
 let form = document.querySelector(".needs-validation"),
+    cartItems = document.querySelectorAll('.cart-item'),
     toast = document.querySelector(".toast");
 
 // FOR SEND BOT
@@ -57,6 +58,11 @@ form.addEventListener("submit", (e) => {
                 userLocation.value = "";
                 userMessage.value = "";
                 toast.classList.add("show");
+                cartItems.forEach(function (item) {
+                    item.remove();
+                });
+                toggleCartStatus();
+                calcCartPriceAndDelivery();
                 document.querySelector('.form-check-input').checked = false;
                 setTimeout(function () {
                     toast.classList.remove("show");
@@ -67,6 +73,11 @@ form.addEventListener("submit", (e) => {
                 userPhone = "";
                 userLocation = "";
                 userMessage = "";
+                cartItems.forEach(function (item) {
+                    item.remove();
+                });
+                toggleCartStatus();
+                calcCartPriceAndDelivery();
             })
     }
 })
