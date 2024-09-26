@@ -75,6 +75,11 @@ a {
     text-decoration: line-through;
 }
 
+/* Xato bo'lganda elementning border rangini qizil qilish uchun class */
+.error {
+    border-color: red !important;
+}
+
 .header {
     padding-top: 50px;
     padding-bottom: 50px;

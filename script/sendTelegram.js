@@ -1,6 +1,5 @@
 /*=============== TELEGRAM BOT ===============*/
 let form = document.querySelector(".needs-validation"),
-    cartItems = document.querySelectorAll('.cart-item'),
     toast = document.querySelector(".toast");
 
 // FOR SEND BOT
@@ -11,6 +10,35 @@ let bot = {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    const fields = form.querySelectorAll('input[type="text"], textarea');
+
+    // Domen nomlarini aniqlash uchun regular expression
+    const urlPattern = /([a-zA-Z0-9-]+\.[a-zA-Z]{2,})/g;
+
+    // Input yoki textarea ichida link borligini tekshirish uchun bayroq
+    let foundLink = false;
+
+    fields.forEach(input => {
+        // Oldindan qo'yilgan error classini olib tashlaymiz
+        input.classList.remove('error');
+
+        // Agar inputda link yoki domen topilsa
+        if (urlPattern.test(input.value)) {
+            foundLink = true; // Link topilganini belgilaymiz
+            input.classList.add('error'); // Xato bo'lgan elementni belgiliymiz
+            alert(`Link yoki domen ${input.name} da topildi!`); // Foydalanuvchiga xabar
+        }
+    });
+
+    fields.forEach(input => {
+        input.addEventListener('input', function() {
+            // Agar inputdagi matn to'g'ri bo'lsa, error classini olib tashlaymiz
+            if (!urlPattern.test(input.value)) {
+                input.classList.remove('error');
+            }
+        });
+    });
 
     let userName = document.querySelector("#user-name"),
         userPhone = document.querySelector("#phone-num"),
@@ -46,7 +74,9 @@ form.addEventListener("submit", (e) => {
     %0A %0ATovarlar: %0A${resultText} %0A %0A💵 Umumiy narx: ${totalPrice} so'm
     `
 
-    if (userPhone.value.length <= 16) {
+    if (foundLink) {
+        e.preventDefault(); // Form yuborilishini to'xtatadi
+    } else if (userPhone.value.length <= 16) {
         alert("Telefon raqamingizni to'liq kiriting ☎");
     } else {
         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${sendMessage}`, {

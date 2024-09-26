@@ -71,7 +71,7 @@ if ($('#promocode').length) {
 }
 
 // Sahifadagi no-copy classga ega elementlarda copy hodisasini o'chirib qo'yamiz
-document.addEventListener('copy', function(event) {
+document.addEventListener('copy', function (event) {
     const selection = window.getSelection().toString();
     const noCopyElements = document.querySelectorAll('.no-copy');
 
