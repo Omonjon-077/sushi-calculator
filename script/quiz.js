@@ -1,7 +1,43 @@
-activeTest = localStorage.getItem('test') ? localStorage.getItem('test') : null;
-activePromo = JSON.parse(localStorage.getItem('promo')) ? JSON.parse(localStorage.getItem('promo')) : null;
-userScore = localStorage.getItem('score') ? localStorage.getItem('score') : 0;
-touchBtn = localStorage.getItem('touch') ? localStorage.getItem('touch') : null;
+
+function getFromLocalStorage(key) {
+    const itemStr = localStorage.getItem(key);
+
+    // Agar element mavjud bo'lmasa
+    if (!itemStr) {
+        return null;
+    }
+
+    const item = JSON.parse(itemStr); // Saqlangan ma'lumotni JSON formatida qaytaramiz
+    const now = new Date(); // Hozirgi vaqt
+
+    // Agar ma'lumotning muddati o'tgan bo'lsa
+    if (now.getTime() > item.expiry) {
+        localStorage.removeItem(key); // Ma'lumotni o'chiramiz
+        return null;
+    }
+
+    return item.value; // Ma'lumotni qaytaramiz
+}
+
+function saveToLocalStorage(key, value) {
+    const now = new Date(); // Hozirgi vaqtni olamiz
+    const item = {
+        value: value, // Saqlanadigan ma'lumot
+        // expiry: now.getTime() + 7 * 24 * 60 * 60 * 1000 // 1 hafta (7 kun) keyin o'chirilishi kerak
+        expiry: now.getTime() + 180 * 1000 // 3 daqiqadan keyin o'chirilishi kerak
+    };
+    localStorage.setItem(key, JSON.stringify(item)); // Ma'lumotni JSON formatida saqlaymiz
+}
+
+activeTest = getFromLocalStorage('test');
+activePromo = getFromLocalStorage('promo');
+userScore = getFromLocalStorage('score');
+if (userScore == null) {
+    userScore = 0
+}
+touchBtn = getFromLocalStorage('touch');
+
+
 if ($('.questions-page').length) {
     // User testdan o'tkanini tekshirsh
     if (activeTest === 'active') {
@@ -25,6 +61,7 @@ if ($('.questions-page').length) {
     } else if (touchBtn == 'inactive') {
         document.querySelector('#warning-text-2').classList.remove('d-none');
     }
+
 
     // Savollar ro'yhati
     const quizData = [
@@ -254,10 +291,11 @@ if ($('.questions-page').length) {
             }
         });
         // User test natijasini 3tadan ko'p bolganida promo berish va localga saqlash
-        if (score >= 3) {
+        if (score >= 4) {
             document.querySelector('.promo').classList.remove('d-none');
             document.querySelector('.promo span').innerText = randomElement.name;
-            localStorage.setItem('promo', JSON.stringify(randomElement));
+            saveToLocalStorage('promo', randomElement);
+            // localStorage.setItem('promo', JSON.stringify(randomElement));
         }
         // User test natijasini 1tadan ko'p bolganida pageni yangilash
         if (score >= 1) {
@@ -267,7 +305,8 @@ if ($('.questions-page').length) {
             document.getElementById('countdown').classList.add('d-none');
         }
         // User test natijinni bilganda localga yozib qoyish
-        localStorage.setItem('score', score);
+        saveToLocalStorage('score', score);
+        // localStorage.setItem('score', score);
         document.getElementById('result').innerText = `Siz ${randomElements.length} ta savoldan ${score} ta topdingiz`;
     });
 
@@ -275,7 +314,8 @@ if ($('.questions-page').length) {
     quizStartBtn.addEventListener('click', () => {
         document.querySelector('#quiz-block').classList.remove('d-none');
         quizStartBtn.classList.add('d-none');
-        localStorage.setItem('test', 'active');
+        saveToLocalStorage('test', 'active');
+        // localStorage.setItem('test', 'active');
         document.getElementById('countdown').classList.remove('d-none');
         document.getElementById('warning-text').classList.remove('d-none');
         countdown();
@@ -301,8 +341,10 @@ if ($('.questions-page').length) {
                 setTimeout(function () {
                     location.reload();
                 }, 1500);
-                localStorage.setItem('test', 'active');
-                localStorage.setItem('touch', 'inactive');
+                saveToLocalStorage('test', 'active');
+                saveToLocalStorage('touch', 'inactive');
+                // localStorage.setItem('test', 'active');
+                // localStorage.setItem('touch', 'inactive');
             }
         }
 
