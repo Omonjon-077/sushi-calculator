@@ -5,7 +5,7 @@ let form = document.querySelector(".needs-validation"),
 // FOR SEND BOT
 let bot = {
     TOKEN: "7244017061:AAEKlZM-uhpGl6PvLAvWgAJJEuU848CQ4HA",
-    chatID: "-1002488322132", // Agar botning o'zigagina xabar jo'natilsa ID shunday qoladi agar guruhga bolsa boshiga tire "-" qo'yish kerak
+    chatID: "1369873117", // Agar botning o'zigagina xabar jo'natilsa ID shunday qoladi agar guruhga bolsa boshiga tire "-" qo'yish kerak
 }
 
 form.addEventListener("submit", (e) => {
@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => {
 
     let sendMessage = `
     Mijoz %0A 👤 Ismi: ${userName.value} %0A 📞 Telefon raqami: ${userPhone.value} %0A 📍 Manzili: ${userLocation.value} %0A 💬 Xabari: ${userMessage.value} 
-    %0A %0ATovarlar: %0A${resultText} %0A %0A💵 Umumiy narx: ${totalPrice} so'm
+    %0A %0ATovarlar: %0A${resultText} %0A %0A💵 Umumiy narx: ${totalPrice} so'm %0A%0A⚙️From: Sushi and Rolls
     `
 
     if (foundLink) {
